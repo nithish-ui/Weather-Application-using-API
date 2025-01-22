@@ -1,0 +1,59 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    /* position: relative; */
+    background-image: url(https://img.freepik.com/premium-photo/rain-water-drop-falling-city-street-floor-heavy-rain-day_1962-2005.jpg?w=2000);
+    background-repeat: no-repeat;
+    background-size: cover,contain;
+}
+.container
+{ margin: auto auto;
+    position :absolute;
+    left: 50%;
+    transform: translate(-50%);
+
+    /* background-color: black; */
+    margin-top: 200px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* margin-bottom: 50%; */
+}
+.inputbox
+{
+    width: 400px;
+    /* height: 50px; */
+    padding: 10px 10px;
+    /* box-sizing: border-box; */
+    /* background-color: #d3f9d8; */
+    border-radius: 7px;
+}
+.inputbox:hover
+{
+    box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.19)     ;
+}
+.div2
+{
+    margin:  0 43%;
+    /* transform: translate(-80%); */
+}
+.btn
+{
+    padding: 15px 15px;
+    border-radius: 12px;
+    background-color: goldenrod;
+
+}
+.btn:hover
+{
+    /* box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.19)     ; */
+}
+#mark
+{   font-size: 80px;
+    color:green;
+    font-size: 40px;
+}

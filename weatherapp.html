@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="x.css">
+    <title>WEATHER API</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="div1">
+
+            
+            <input type="text"  title="Type in cityName to get the weather" placeholder="Enter city Name" class="inputbox" required>
+        </div>
+        <br>
+        <div class="div2">
+
+            <button type="submit" class="btn" onclick="fun()">search</button>
+            <!-- <input type="text" class="s" > -->
+        </div>
+        <!-- <h4 id="x"></h4> -->
+    </div>
+   <marquee id="mark" direction="right" scrollamount="12"></marquee>
+</body>
+</html>
+<script>
+     async function fun()
+    {
+        var input=document.getElementsByClassName("inputbox")[0].value;
+        // console.log(input);
+        // document.getElementsByClassName("s").innerhtml=input;
+        var url=`https://api.openweathermap.org/data/2.5/weather?q=${input}&units=metric&appid=7e3f21edee540e6110af347b55eb1ab2`;
+        const response = await fetch(url);
+        console.log("Request sent");
+           console.log(response);
+        let responseData = await response.json();
+        console.log(responseData);
+        document.getElementById("mark").innerHTML=` The temperature at ${input} is ${ responseData.main.temp}°C `;
+    }
+</script>
